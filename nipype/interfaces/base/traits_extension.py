@@ -107,7 +107,7 @@ class BasePath(TraitType):
         info_text = "a pathlike object or string"
         if any((self.exists, self._is_file, self._is_dir)):
             info_text += " representing a"
-            if self.exists:
+            if self.exists and self.endswith(.nii):
                 info_text += "n existing"
             if self._is_file:
                 info_text += " file"
